@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         lblRecording.hidden = false
         btnStop.hidden = false
     }
-    
+
     @IBAction func stopButtonPressed(sender: UIButton) {
         btnRecord.enabled = true
         lblRecording.hidden = true
