@@ -11,11 +11,18 @@ import UIKit
 class ViewController: UIViewController {
 
     
+    @IBOutlet weak var btnRecord: UIButton!
     @IBOutlet weak var lblRecording: UILabel!
     @IBOutlet weak var btnStop: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        btnStop.hidden = true
+        lblRecording.hidden = true
+        btnRecord.enabled = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,11 +35,13 @@ class ViewController: UIViewController {
     //sender: UIButton --> sender is a UIButton
     @IBAction func recordAudio(sender: UIButton) {
         println("in record audio")
+        btnRecord.enabled = false
         lblRecording.hidden = false
         btnStop.hidden = false
     }
     
     @IBAction func stopButtonPressed(sender: UIButton) {
+        btnRecord.enabled = true
         lblRecording.hidden = true
         btnStop.hidden = true
     }
