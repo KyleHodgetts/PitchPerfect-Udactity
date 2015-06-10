@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class RecordSoundViewController: UIViewController {
+class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
 
     
     @IBOutlet weak var btnRecord: UIButton!
@@ -46,18 +46,8 @@ class RecordSoundViewController: UIViewController {
         //As String and NOT :AnyObject
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
         
-        //Retrieve Current Date
-        let currentDateTime = NSDate()
-        
-        //Instantiate a date Formatter
-        let formatter = NSDateFormatter()
-        
-        //Set the date format
-        //DayDayMonthMonthYYYY -- HourHourMinMinSecSec
-        formatter.dateFormat = "ddMMyyyy-HHmmss"
-        
         //Set name of file
-        let recordingName = formatter.stringFromDate(currentDateTime)+".wav"
+        let recordingName = "my_audio.wav"
         
         let pathArray = [dirPath, recordingName]
         
@@ -74,9 +64,14 @@ class RecordSoundViewController: UIViewController {
         
         //Instantiate the recorder
         recorder = AVAudioRecorder(URL: filePath, settings: nil, error: nil)
+        recorder.delegate = self
         recorder.meteringEnabled = true
         recorder.prepareToRecord()
         recorder.record()
+    }
+    
+    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
+        
     }
 
     @IBAction func stopButtonPressed(sender: UIButton) {
