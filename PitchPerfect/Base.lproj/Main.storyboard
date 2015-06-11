@@ -36,35 +36,36 @@
                                     <action selector="stopButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rn6-bo-WjV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gle-31-fsS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press mic to record..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gle-31-fsS">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="lYM-qY-Oit"/>
+                                    <constraint firstAttribute="height" constant="21" id="sGT-fH-WA0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="lYM-qY-Oit"/>
+                                        <exclude reference="sGT-fH-WA0"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="lYM-qY-Oit"/>
+                                        <include reference="sGT-fH-WA0"/>
                                     </mask>
                                 </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gle-31-fsS" firstAttribute="top" secondItem="YAY-dt-nQP" secondAttribute="bottom" constant="8" symbolic="YES" id="COG-Id-maO"/>
                             <constraint firstAttribute="centerX" secondItem="6DB-i2-6rc" secondAttribute="centerX" id="HdO-DN-cYC"/>
                             <constraint firstAttribute="centerY" secondItem="YAY-dt-nQP" secondAttribute="centerY" id="Oip-Qb-UWP"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="6DB-i2-6rc" secondAttribute="bottom" constant="20" id="Qw6-9H-9dL"/>
-                            <constraint firstItem="gle-31-fsS" firstAttribute="leading" secondItem="YAY-dt-nQP" secondAttribute="leading" id="UCp-fF-ZhF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gle-31-fsS" secondAttribute="trailing" constant="89" id="RbR-Hb-hdG"/>
+                            <constraint firstItem="gle-31-fsS" firstAttribute="centerX" secondItem="YAY-dt-nQP" secondAttribute="centerX" id="Yg2-uH-ctx"/>
+                            <constraint firstItem="gle-31-fsS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="73" id="eJq-F7-h4f"/>
+                            <constraint firstItem="gle-31-fsS" firstAttribute="top" secondItem="YAY-dt-nQP" secondAttribute="bottom" constant="8" symbolic="YES" id="hkt-WR-1ZI"/>
                             <constraint firstAttribute="centerX" secondItem="YAY-dt-nQP" secondAttribute="centerX" id="o9q-ny-kav"/>
-                            <constraint firstItem="gle-31-fsS" firstAttribute="trailing" secondItem="YAY-dt-nQP" secondAttribute="trailing" id="oOW-Er-Pf7"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -73,13 +74,14 @@
                                 <exclude reference="gle-31-fsS"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Qw6-9H-9dL"/>
-                                <exclude reference="COG-Id-maO"/>
-                                <exclude reference="UCp-fF-ZhF"/>
-                                <exclude reference="oOW-Er-Pf7"/>
-                                <exclude reference="HdO-DN-cYC"/>
                                 <exclude reference="Oip-Qb-UWP"/>
                                 <exclude reference="o9q-ny-kav"/>
+                                <exclude reference="RbR-Hb-hdG"/>
+                                <exclude reference="Yg2-uH-ctx"/>
+                                <exclude reference="eJq-F7-h4f"/>
+                                <exclude reference="hkt-WR-1ZI"/>
+                                <exclude reference="HdO-DN-cYC"/>
+                                <exclude reference="Qw6-9H-9dL"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -89,13 +91,14 @@
                                 <include reference="gle-31-fsS"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Qw6-9H-9dL"/>
-                                <include reference="COG-Id-maO"/>
-                                <include reference="UCp-fF-ZhF"/>
-                                <include reference="oOW-Er-Pf7"/>
-                                <include reference="HdO-DN-cYC"/>
                                 <include reference="Oip-Qb-UWP"/>
                                 <include reference="o9q-ny-kav"/>
+                                <include reference="RbR-Hb-hdG"/>
+                                <include reference="Yg2-uH-ctx"/>
+                                <include reference="eJq-F7-h4f"/>
+                                <include reference="hkt-WR-1ZI"/>
+                                <include reference="HdO-DN-cYC"/>
+                                <include reference="Qw6-9H-9dL"/>
                             </mask>
                         </variation>
                     </view>

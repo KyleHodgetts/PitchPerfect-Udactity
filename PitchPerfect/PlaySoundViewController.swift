@@ -33,20 +33,6 @@ class PlaySoundViewController: UIViewController {
         
         //Enable rate so we can change the speed at which the sound is played
         player.enableRate = true
-        
-        
-        
-        /* LEGACY CODE */
-        //Returns the file's location URL from the NSBundle (Project resources bundled)
-        //Path for resource, from the main bundle look for the file name with the given type
-        //        if var fileLoc = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3"){
-        //            //Convert string fileLoc to URLPath
-        //            var filePathURL = NSURL.fileURLWithPath(fileLoc)
-        //
-        //        }
-        //        else {
-        //            println("File does not exist!")
-        //        }
     }
     
     @IBAction func playSlowSound(sender: UIButton) {

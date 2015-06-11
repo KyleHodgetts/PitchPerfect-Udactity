@@ -11,6 +11,8 @@ import AVFoundation
 
 class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
 
+    let notRecordingLabel: String! = "Press Mic to Record..."
+    let recordingLabel: String! = "Recording..."
     
     @IBOutlet weak var btnRecord: UIButton!
     @IBOutlet weak var lblRecording: UILabel!
@@ -25,7 +27,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewWillAppear(animated: Bool) {
         btnStop.hidden = true
-        lblRecording.hidden = true
+        lblRecording.text = notRecordingLabel
         btnRecord.enabled = true
     }
 
@@ -40,7 +42,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     @IBAction func recordAudio(sender: UIButton) {
         println("in record audio")
         btnRecord.enabled = false
-        lblRecording.hidden = false
+        lblRecording.text = recordingLabel
         btnStop.hidden = false
         
         //true -> expand tilde
@@ -54,7 +56,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
         
         //Accepts an array where the first element is a directory and the second is a file name
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
-        //println(filePath)
+        println(filePath)
         
         //Define audio session
         var session = AVAudioSession.sharedInstance()
@@ -78,15 +80,13 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully success: Bool) {
         //If the recording did finish successfully
         if(success){
-            //Save the recorded audio.
-            audio = RecordedAudio()
-            audio.filePathUrl = recorder.url
-        
-            //Returns the name of the file without the rest of the path. file.mp3
-            audio.title = recorder.url.lastPathComponent
-        
+            /* 
+            Save the recorded audio
+            lastPathCompoenent, returns the last part of a file path. the file name and it's extension
+            */
+            audio = RecordedAudio(aFilePathUrl: recorder.url, aTitle: recorder.url.lastPathComponent!)
+
             //Move to next screen with a segue
-            //Will trigger prepareForSegue
             self.performSegueWithIdentifier("stopRecording", sender: audio)
         }
         else {
@@ -112,7 +112,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
         audioSession.setActive(false, error: nil)
         
         btnRecord.enabled = true
-        lblRecording.hidden = true
+        lblRecording.text = notRecordingLabel
         btnStop.hidden = true
     }
 }
