@@ -15,6 +15,7 @@
 		981336561B2867BB001780D4 /* PitchPerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981336551B2867BB001780D4 /* PitchPerfectTests.swift */; };
 		981336641B289790001780D4 /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 981336631B289790001780D4 /* movie_quote.mp3 */; };
 		981336661B28B0EF001780D4 /* PlaySoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981336651B28B0EF001780D4 /* PlaySoundViewController.swift */; };
+		984C57EF1B29BD7D0064254D /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C57EE1B29BD7D0064254D /* RecordedAudio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		981336551B2867BB001780D4 /* PitchPerfectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchPerfectTests.swift; sourceTree = "<group>"; };
 		981336631B289790001780D4 /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = movie_quote.mp3; path = ../movie_quote.mp3; sourceTree = "<group>"; };
 		981336651B28B0EF001780D4 /* PlaySoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundViewController.swift; sourceTree = "<group>"; };
+		984C57EE1B29BD7D0064254D /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				9813363F1B2867BB001780D4 /* AppDelegate.swift */,
 				981336411B2867BB001780D4 /* RecordSoundViewController.swift */,
+				984C57EE1B29BD7D0064254D /* RecordedAudio.swift */,
 				981336431B2867BB001780D4 /* Main.storyboard */,
 				981336461B2867BB001780D4 /* Images.xcassets */,
 				981336481B2867BB001780D4 /* LaunchScreen.xib */,
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				984C57EF1B29BD7D0064254D /* RecordedAudio.swift in Sources */,
 				981336421B2867BB001780D4 /* RecordSoundViewController.swift in Sources */,
 				981336661B28B0EF001780D4 /* PlaySoundViewController.swift in Sources */,
 				981336401B2867BB001780D4 /* AppDelegate.swift in Sources */,

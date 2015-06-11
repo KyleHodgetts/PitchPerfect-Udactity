@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+//NSObject is where most objects inherit from
+class RecordedAudio: NSObject{
+    var filePathUrl: NSURL!
+    var title: String!
+}

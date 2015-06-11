@@ -12,25 +12,27 @@ import AVFoundation
 class PlaySoundViewController: UIViewController {
     
     private var player: AVAudioPlayer!
+    var recievedAudio: RecordedAudio!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Returns the file's location URL from the NSBundle (Project resources bundled)
         //Path for resource, from the main bundle look for the file name with the given type
-        if var fileLoc = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3"){
-            //Convert string fileLoc to URLPath
-            var filePathURL = NSURL.fileURLWithPath(fileLoc)
-            
-            //Instantiate the player with the contents of the filePathURL.
-            player = AVAudioPlayer(contentsOfURL: filePathURL, error: nil)
-            
-            //Enable rate so we can change the speed at which the sound is played
-            player.enableRate = true
-        }
-        else {
-            println("File does not exist!")
-        }
+//        if var fileLoc = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3"){
+//            //Convert string fileLoc to URLPath
+//            var filePathURL = NSURL.fileURLWithPath(fileLoc)
+//            
+//        }
+//        else {
+//            println("File does not exist!")
+//        }
+        
+        //Instantiate the player with the contents of the filePathURL.
+        player = AVAudioPlayer(contentsOfURL: recievedAudio.filePathUrl, error: nil)
+        
+        //Enable rate so we can change the speed at which the sound is played
+        player.enableRate = true
     }
     
     @IBAction func playSlowSound(sender: UIButton) {

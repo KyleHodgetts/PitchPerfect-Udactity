@@ -104,7 +104,7 @@
                         <outlet property="btnRecord" destination="YAY-dt-nQP" id="527-xF-JXU"/>
                         <outlet property="btnStop" destination="6DB-i2-6rc" id="mVc-do-bdl"/>
                         <outlet property="lblRecording" destination="gle-31-fsS" id="45f-CK-lhY"/>
-                        <segue destination="sSA-vL-nu7" kind="show" id="sEv-EW-8ec"/>
+                        <segue destination="sSA-vL-nu7" kind="show" identifier="stopRecording" id="sEv-EW-8ec"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
