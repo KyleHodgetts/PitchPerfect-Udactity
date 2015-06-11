@@ -54,7 +54,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
         
         //Accepts an array where the first element is a directory and the second is a file name
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
-        println(filePath)
+        //println(filePath)
         
         //Define audio session
         var session = AVAudioSession.sharedInstance()
